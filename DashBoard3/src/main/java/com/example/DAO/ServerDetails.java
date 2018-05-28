@@ -74,10 +74,10 @@ public class ServerDetails {
 			session.setPassword(pwd);
 			session.setConfig(config);
 			session.connect();
-			for (String cmd : list) {
+			for (String command : list) {
 				String s = null;
 				Channel channel = session.openChannel("exec");
-				((ChannelExec) channel).setCommand(cmd);
+				((ChannelExec) channel).setCommand(command);
 				channel.setInputStream(null);
 				((ChannelExec) channel).setErrStream(System.err);
 
@@ -95,7 +95,15 @@ public class ServerDetails {
 						if (channel.getExitStatus() == 1) {
 							details.add("Unknown");
 						} else
-							details.add(s.trim());
+						{
+							if(command.equals(StringConstants.LAST_BUILD_CMD))
+							{
+								String arr[]=s.split("\n");
+								details.add(arr[arr.length-1]);
+							}
+							else
+								details.add(s.trim());
+						}
 						break;
 					}
 				}
@@ -104,6 +112,7 @@ public class ServerDetails {
 			session.disconnect();
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}
 		return details;
 	}

@@ -28,7 +28,7 @@ public interface StringConstants {
 	String EAR_TIMESTAMP_CMD="cd /opt/PUMA-GIT-JBOSS-PID-8.0/jbossinstances/pid/deployments &&find pid.ear -maxdepth 0 -printf '%TY-%Tm-%Td %TH:%TM\n'";
 	String MERGE_TIMESTAMP_CMD="cd /opt/pid/autolog &&find ";
 	String TIMESTAMP_CMD=" -maxdepth 0 -printf '%TY-%Tm-%Td %TH:%TM\n'";
-	String LAST_BUILD_CMD = "cd /opt/pid/autolog &&find BUILD-* -maxdepth 0 -printf '%TY-%Tm-%Td %TH:%TM\n' | tail -1";
+	String LAST_BUILD_CMD = "cd /opt/pid/autolog && find BUILD-*  -maxdepth 0 -printf '%TY-%Tm-%Td %TH:%TM\n'";
 	String DBS_COUNT="list db directory | grep alias | wc | awk '{usage=$1} END {print usage }' >> /tmp/tmp/out.txt";
 	String CPU_UTIL_CMD = "top -n 1 -u ";
 	String DB_CPU_UTIL_CMD = " |grep db2sysc| awk '{print $9}'";

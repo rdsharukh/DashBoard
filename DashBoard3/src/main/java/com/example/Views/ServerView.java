@@ -178,10 +178,12 @@ public class ServerView extends VerticalLayout implements View {
 				String[] s2 = s3.split(",");
 				Label dbqa = new Label("IP's connected to PUMAQA DB");
 				heading.addComponent(dbqa);
-				if (!" ".equals(s2[0]) && s2[0] != null) {
-
+				if (!" ".equals(s2[0]) && s2[0] != null)
+				{
 					details.addComponent(new Label(": " + dblist.get(0)));
-				} else {
+				}
+				else
+				{
 					details.addComponent(new Label(": Unknown"));
 				}
 				Label dbdev = new Label("IP's connected to PUMAdev DB");

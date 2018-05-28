@@ -1,0 +1,87 @@
+@import "mytheme.scss";
+@import "addons.scss";
+
+// This file prefixes all rules with the theme name to avoid causing conflicts with other themes.
+// The actual styles should be defined in mytheme.scss
+
+.mytheme {
+  @include addons;
+  @include mytheme;
+.bgclr{
+	background-color: greenyellow;
+	border-color: black;
+	border-radius: 20px;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.first{
+	border-radius: 20px;
+	font-weight: bold;
+}
+.second{
+	border-radius: 20px;
+	cursor: pointer;
+}
+.second:HOVER{
+	border-color: green;
+}
+.delay{
+	border-color: green;
+}
+.label{
+	font-size: 30px;
+	color: black;
+	font-weight:bold;
+}
+.childcomponent{
+	padding-left: 20px;
+	padding-bottom: 20px;
+	border-spacing: 20px;
+}
+.v-splitpanel-horizontal  > div > .v-splitpanel-hsplitter{
+	width:0px;
+}
+.v-margin-top {
+	padding-top: 10px;
+}
+.window{
+	background-color: aliceblue;
+    padding-top: 80px;
+}
+.pass
+{
+	border-color: green;
+}
+.fail{
+	border-color: red;
+}
+.up
+{
+	color: green;
+}
+.down
+{
+	color: red;
+}
+.chart
+{
+	width: 350px;
+}
+.v-window-header{
+	font-size: 20px;
+	color: blue;
+}
+.title
+{
+	font-size: 40px;
+	font-weight: bold;
+	padding-left: 500px;
+}
+.welcome
+{
+	padding-top: 13px;
+    font-size: 20px;
+    padding-right: 10px;
+}
+}

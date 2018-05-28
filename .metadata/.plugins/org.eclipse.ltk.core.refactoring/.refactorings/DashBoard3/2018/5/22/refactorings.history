@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;cmd&apos; in &apos;com.example.DAO.ServerDetails.getAllDetails(...)&apos; to &apos;command&apos;&#x0D;&#x0A;- Original project: &apos;DashBoard3&apos;&#x0D;&#x0A;- Original element: &apos;com.example.DAO.ServerDetails.getAllDetails(String, String, String).cmd&apos;&#x0D;&#x0A;- Renamed element: &apos;cmd&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;cmd&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src\/main\/java&lt;com.example.DAO{ServerDetails.java[ServerDetails~getAllDetails~QString;~QString;~QString;@cmd!2447!2463!2454!2456!QString;!0!false" name="command" references="true" stamp="1527516122288" version="1.0"/>
+</session>
